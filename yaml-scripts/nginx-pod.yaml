@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: nginx-file-pod
+  labels:
+    app: nginx
+    tier: dev
+spec:
+  containers:
+  - name: nginfile-container
+    image: nginx:1.16
+    env:
+    - name: demo_env
+      value: "THis is 1st POD config"
+    ports:
+    - containerPort: 80
